@@ -1,0 +1,6 @@
+{
+    "name": "arrow/gestorphp",
+    "description": "Gestor de Notas en PHP",
+    "type": "project",
+    "require": {}
+}
