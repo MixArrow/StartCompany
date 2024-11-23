@@ -29,7 +29,16 @@ $texto = "Cybersecurity World"
                 <li>Virus</li>
                 <li>Ransomware</li>
             </ol>
-                </body>
+                <script>
+                    const buttons = document.querySelectorAll('button');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        button.classList.toggle('active');
+                    });
+                });
+                </script>
+            </body>
 
     </body>
 </html>
