@@ -1,36 +1,36 @@
 body {
-    text-align: center; /* Centra todo el contenido de la página */
-    font-family: 'Times New Roman', Times, serif; /* Establece la fuente del texto */
+    text-align: center; /* Alineador del texto, para la posición */
+    font-family: 'Times New Roman', Times, serif; /* Esta es la fuente del texto */
 }
 
 h1 {
-    color: #333; /* Define el color del título */
+    color: #333; /*Color del titulo */
 }
 
 img {
-    display: block; /* Muestra la imagen como un bloque, ocupando todo el ancho disponible */
+    display: block; /*Aqui muestra la imagen ocupando todo el ancho */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    animation: fadeIn 3s; /* Aplica la animación fadeIn a la imagen */
+    animation: fadeIn 3s; /* El efecto de entrada */
 }
 
-@keyframes fadeIn { /* Define la animación fadeIn */
+@keyframes fadeIn { /* Aqui es como va accionar el efecto, llamandolo primero */
     from {
-        opacity: 1; /* Inicialmente la imagen está oculta (opacidad 0) */
+        opacity: 1; /* Imagen oculta (opacidad 0) */
     }
     to {
-        opacity: 2; /* Al final de la animación, la imagen es visible (opacidad 1) */
+        opacity: 2; /* Luego es visible (opacidad 1) */
     }
 }
 
 button {
     display: block; /* Muestra los botones en línea, uno al lado del otro */
-    margin: 20px; /* Añade un margen de 10 píxeles alrededor de cada botón */
+    margin: 20px; /* Añade un marco de 10 píxeles alrededor de cada botón */
     padding: 10px 20px; /* Añade un relleno interno de 10 píxeles en la parte superior e inferior, y 20 píxeles a la izquierda y derecha */
-    background-color: #3e63a8; /* Establece el color de fondo del botón */
-    border: 2px solid hsl(222, 62%, 34%); /* Añade un borde de 1 píxel de color gris claro */
+    background-color: #3e63a8; /* Color de fondo del botón */
+    border: 2px solid hsl(222, 62%, 34%); /* Borde píxeleado  */
     cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse por encima */
     position: relative; /* Permite posicionar elementos en relación a sus padres */
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif; /*Otro formato de texto*/
 }
 
 button p {
