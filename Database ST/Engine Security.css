@@ -1,0 +1,50 @@
+body {
+    text-align: center; /* Centra todo el contenido de la página */
+    font-family: 'Times New Roman', Times, serif; /* Establece la fuente del texto */
+}
+
+h1 {
+    color: #333; /* Define el color del título */
+}
+
+img {
+    display: block; /* Muestra la imagen como un bloque, ocupando todo el ancho disponible */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    animation: fadeIn 3s; /* Aplica la animación fadeIn a la imagen */
+}
+
+@keyframes fadeIn { /* Define la animación fadeIn */
+    from {
+        opacity: 1; /* Inicialmente la imagen está oculta (opacidad 0) */
+    }
+    to {
+        opacity: 2; /* Al final de la animación, la imagen es visible (opacidad 1) */
+    }
+}
+
+button {
+    display: block; /* Muestra los botones en línea, uno al lado del otro */
+    margin: 20px; /* Añade un margen de 10 píxeles alrededor de cada botón */
+    padding: 10px 20px; /* Añade un relleno interno de 10 píxeles en la parte superior e inferior, y 20 píxeles a la izquierda y derecha */
+    background-color: #3e63a8; /* Establece el color de fondo del botón */
+    border: 2px solid hsl(222, 62%, 34%); /* Añade un borde de 1 píxel de color gris claro */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse por encima */
+    position: relative; /* Permite posicionar elementos en relación a sus padres */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button p {
+    position: absolute; /* Posiciona el texto del concepto de forma absoluta dentro del botón */
+    top: 100%; /* Coloca el texto justo debajo del botón */
+    left: 0; /* Centra el texto horizontalmente */
+    width: 70%; /*El tamaño del texto en cuanto a lo ancho del boton*/
+    opacity: 0; /* Inicialmente el texto está oculto (opacidad 0) */
+    transition: opacity 0.3s ease-in-out; /* Aplica una transición suave al cambiar la opacidad */
+}
+
+button:hover p {
+    opacity: 2; /* Al pasar el mouse por encima del botón, muestra el texto (opacidad 1) */
+}
+button.active p {
+    opacity: 1; /* Muestra el texto cuando el botón tiene la clase 'active' */
+}
