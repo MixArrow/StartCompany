@@ -20,13 +20,30 @@
     </form>
     
     <?php
-if($_SERVER["REQUEST_METHOD"] == "POST")
-    echo "<h1>Primer Calculo</h1>";
-    // Un poco de matemáticas básicas
-    $numero1 = 10;
-    $numero2 = 5;
-    $suma = $numero1 + $numero2;
-    echo "<p>La suma de $numero1 y $numero2 es: $suma</p>";
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $operation = $_POST['Operation'];
+
+    switch ($operacion) {
+        case 'suma':
+            $results = $num1 - $num2;
+
+            break;
+        case 'Subtraction'
+            $results = $num - $num2
+            break;
+        case 'Multiplication'
+            $results = $num * $num2
+            case 'Division'
+            if ($num2 !=0) {
+                $results = $num / $num2;}
+        else {$result = "Don't can divide Zero";
+             }
+            break;
+}
+echo "<p>The Results is: $results</p>
+}
     ?>
 </body>
 </html>
