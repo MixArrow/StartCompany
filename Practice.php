@@ -17,13 +17,11 @@
         </select>
 
         <button type="Submit">Calculando</button>
-        
     </form>
     
     <?php
-    echo "<h1>¡Bienvenido a tu primer programa en PHP!</h1>";
-    echo "<p>Este es un simple ejemplo que muestra un mensaje en la pantalla.</p>";
-
+if($_SERVER["REQUEST_METHOD"] == "POST")
+    echo "<h1>Primer Calculo</h1>";
     // Un poco de matemáticas básicas
     $numero1 = 10;
     $numero2 = 5;
