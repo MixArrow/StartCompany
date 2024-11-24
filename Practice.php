@@ -16,7 +16,7 @@
             <option value="Multiplication">Multiplication</option>
         </select>
 
-        <button type="Submit">Calculando</button>
+        <button type="Submit">Calcular</button>
     </form>
     
     <?php
@@ -30,20 +30,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $results = $num1 - $num2;
 
             break;
-        case 'Subtraction'
-            $results = $num - $num2
+        case 'Subtraction':
+            $results = $num - $num2;
             break;
-        case 'Multiplication'
-            $results = $num * $num2
-            case 'Division'
+        case 'Multiplication';
+            $results = $num * $num2;
+            case 'Division':
             if ($num2 !=0) {
                 $results = $num / $num2;}
         else {$result = "Don't can divide Zero";
              }
             break;
-}
-echo "<p>The Results is: $results</p>
-}
+        }
+
+echo "<p>The Results is: $results</p>";
+    }
     ?>
 </body>
 </html>
