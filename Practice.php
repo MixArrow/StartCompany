@@ -4,11 +4,11 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <h2>Calculadora</h2>
-    <form method= "post" action="">
+    <h2>Calculator</h2>
+    <form method= "post" action="Practice.php">
         <input type="number" name="num1" placeholder="Number 1">
         <input type="number" name="num2" placeholder="Number 2">
-        <select name="Math Operation">
+        <select name="operation">
 
             <option value="Addition">Addition</option>
             <option value="Subtraction">Subtraction</option>
@@ -23,27 +23,28 @@
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $num1 = $_POST['num1'];
     $num2 = $_POST['num2'];
-    $operation = $_POST['Operation'];
+    $operation = $_POST['operation'];
 
-    switch ($operacion) {
-        case 'suma':
-            $results = $num1 - $num2;
+    switch ($operation) {
+        case 'Addition':
+            $results = $num1 + $num2;
 
             break;
         case 'Subtraction':
             $results = $num - $num2;
             break;
-        case 'Multiplication';
+        case 'Multiplication':
             $results = $num * $num2;
+            break;
             case 'Division':
-            if ($num2 !=0) {
+            if ($num2 != 0) {
                 $results = $num / $num2;}
-        else {$result = "Don't can divide Zero";
+        else {$results = "Don't can divide Zero";
              }
             break;
         }
 
-echo "<p>The Results is: $results</p>";
+echo "<p> The Results is: $results </p>";
     }
     ?>
 </body>
