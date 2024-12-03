@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VerMax LOQ</title>
   <style>
+    
     body {
       display: flex;
       margin: 0;
@@ -49,6 +50,7 @@
   </style>
 </head>
 <body>
+  
   <div class="left-panel">
     <h1>Welcome to VerMax Company</h1>
     <div class="form-group">
