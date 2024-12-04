@@ -1,44 +1,62 @@
-body {
+/*Reinicio Basico */
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
-
+/* Configuración del encabezado */
 header {
-    position: absolute;
-    top: 2px;
-    left: 5px;
-    padding: 20px;
-    background-color: rgba(225, 213, 213, 0.8);
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos de forma equitativa */
-    align-items: center; /* Alinea los elementos verticalmente al centro */
+    position: relative;
+    height: 100vh; /* Altura completa del viewport */
+    width: 100%; /* Ancho completo */
+    overflow: hidden;
   }
 
-h1 {
-    margin: 0;
-}
-
-.fondo-animado {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 700%;
-    height: 100px; /* Ajusta la altura según el tamaño del título */
-    background-image: url('');
-    background-size: cover;
-    animation: mover-fondo 10s linear infinite;
-}
-.header-background { /* Nuevo contenedor para la animación */
+/*Estilo del video de fondo */
+.background-video-VerMax {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    background-image: url('https://images.app.goo.gl/oi3G39aef5Aa5esGA');
-    background-size: cover;
-    animation: mover-fondo 10s linear infinite;
-    z-index: -1; /* Colocamos la animación detrás del contenido */
+    height: 100px; /* Ajusta la altura según el tamaño del título */
+    object-fit: cover;
+    z-index: -1; /* Detras del contenido */
+    opacity: 0.95; /*Sombrado ligero*/
 }
+
+/* Contenido dentro del encabezado */
+.header-content {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 20px;
+ box-sizing: border-box;   
+}
+/* Estilo al logo  */
+.logo{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Darle estilo a la palabra Login */
+.login a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.login a:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+
 
 
 @keyframes mover-fondo {
