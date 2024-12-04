@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="FrontEnd.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Vermax Company</div>
+   <!-- Video de fondo -->
+    <>
+  <video class="background-video-VerMax" autoplay loop muted>
+      <source src="Videos/Fondo VerMax-Login.mp4" type="video/mp4">
+  </video>
+   <!-- Marca de la compania y Logueo -->
+    <div class="header-content">
+      <div class="logo">Vermax Company</div>
         <div class="login">
             <a href="#">Start Login</a>
-        </div>
-        <div class="fondo-animado"></div>
-      <video width="300" height="360" autoplay loop muted>
-    <source src="Videos/Fondo VerMax-Login.mp4" type="video/mp4">
-</video>
+         </div>
+       </div>
     </header>
 
 
@@ -89,16 +91,18 @@
   </style>
 </head>
 <body>
-  <!-- Principal Nombre de VerMax -->
-  <header>
-    <div class="logo">VerMax Company</div>
-    <div class="login">Start Login</div>
-  </header>
 
-  <section class="intro">
-    <h1>VerMax Company</h1>
-    <img src="your-image1.jpg" alt="Company Background">
-  </section>
+  <!-- Introduccion a VerMax logo e imagenes de entrada -->
+  <div id="intro">
+        <div class="letters">
+            <span class="letter" id="V">V</span>
+            <span class="letter" id="M">M</span>
+        </div>
+        <h1 id="company-name"></h1>
+    </div>
+    <script src="VerMax.js"></script>
+
+      <!-- Fin de la Introduccion -->
 
   <div class="content">
   <!-- Video -->
@@ -113,7 +117,7 @@
 
     <!-- Video -->
     <section class="section">
-    <video width="640" height="360" autoplay loop>
+    <video width="640" height="360" autoplay loop muted>
   <source src="Videos/VerMax_Propósito.mp4" type="video/mp4">
 </video>
   <!-- Descripcion -->
@@ -123,14 +127,14 @@
 
     <!-- Video -->
     <section class="section">
-    <video width="640" height="360" autoplay loop>
+    <video width="640" height="360" autoplay loop muted>
   <source src="Videos/VerMax_Objetivos.mp4" type="video/mp4">
 </video>
 <!-- Descripcion -->
       <h2>Objetivos</h2>
       <p>En VerMax LOQ, estamos constantemente buscando nuevas formas de mejorar nuestros servicios y ampliar nuestros conocimientos. Invertimos en la capacitación continua de nuestro equipo técnico para mantenernos al día con las últimas tendencias y tecnologías en el campo de la videovigilancia. Nuestro objetivo es convertirnos en el referente en la instalación y gestión de sistemas de cámaras de seguridad a nivel nacional. Gracias a nuestra experiencia y a nuestra amplia gama de productos, somos capaces de abordar cualquier proyecto, sin importar su complejidad. Nuestro compromiso con la excelencia nos permite ofrecer soluciones de videovigilancia confiables y escalables que satisfacen las necesidades de nuestros clientes más exigentes.</p>
     </section>
-    
+
     
   </div>
 </body>
