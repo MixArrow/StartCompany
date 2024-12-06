@@ -19,7 +19,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Ajusta la altura según el tamaño del título */
+    height: 75px; /* Ajusta la altura según el tamaño del título */
     object-fit: cover;
     z-index: -1; /* Detras del contenido */
     opacity: 0.95; /*Sombrado ligero*/
@@ -64,6 +64,22 @@ header {
         background-position: 0% 50%;
     }
     100% {
+        background-position: 100% 50%;
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Alinea a la izquierda */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+.Concepto {
+    border-radius: 20px;
+    margin: 10px;
+    width: 50%; /* Ajusta el tamaño si es necesario */
+}
         background-position: 100% 50%;
     }
 }
