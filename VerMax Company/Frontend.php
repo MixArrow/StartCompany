@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="FrontEnd.css">
 </head>
 <body>
+
    <!-- Video de fondo -->
-    <>
+
   <video class="background-video-VerMax" autoplay loop muted>
       <source src="Videos/Fondo VerMax-Login.mp4" type="video/mp4">
   </video>
+
    <!-- Marca de la compania y Logueo -->
+
     <div class="header-content">
       <div class="logo">Vermax Company</div>
         <div class="login">
@@ -105,11 +108,13 @@
       <!-- Fin de la Introduccion -->
 
   <div class="content">
+
   <!-- Video -->
     <section class="section">
-    <video width="640" height="360" autoplay loop muted>
+    <video class="Concepto" width="640" height="360" autoplay loop muted>
     <source src="Videos/VerMax_Concepto.mp4" type="video/mp4">
     </video>
+
   <!-- Descripcion -->
     <h2>VerMax LOQ Company</h2>
     <p>Es una empresa en soluciones de videovigilancia a nivel nacional. Nos especializamos en la instalación personalizada de sistemas de cámaras de seguridad, adaptándonos a las necesidades únicas de cada cliente. Desde pequeñas empresas hasta grandes corporaciones, ofrecemos una amplia gama de cámaras de última generación con características impresionantes como resolución 4K, visión nocturna de alta calidad, detección de movimiento inteligente y capacidad de análisis de video en tiempo real. Además, nuestros expertos en software garantizan una gestión eficiente de los sistemas, proporcionando una interfaz intuitiva y herramientas de análisis avanzadas. En VerMax LOQ, creemos en el trabajo en equipo y en la importancia de brindar un servicio al cliente excepcional. Nuestro compromiso es construir relaciones duraderas basadas en la confianza y la satisfacción.</p>
@@ -117,9 +122,10 @@
 
     <!-- Video -->
     <section class="section">
-    <video width="640" height="360" autoplay loop muted>
+    <video class="Propósito" width="640" height="360" autoplay loop muted>
   <source src="Videos/VerMax_Propósito.mp4" type="video/mp4">
 </video>
+
   <!-- Descripcion -->
       <h2>Propósitos</h2>
       <p>Nuestro principal proposito es que nuestros clientes se sientan completamente seguros y protegidos. Al elegir VerMax LOQ para la instalación de su sistema de cámaras de seguridad, puede estar seguro de que recibirá un servicio de alta calidad y personalizado. Nuestros técnicos altamente capacitados se encargarán de diseñar e instalar un sistema que se adapte perfectamente a su espacio y a sus necesidades específicas. Además, le brindaremos asesoramiento experto sobre los diferentes tipos de cámaras disponibles y le ayudaremos a seleccionar las opciones más adecuadas para su aplicación. Nuestra misión es garantizar su tranquilidad y proteger lo que más le importa.</p>
@@ -127,9 +133,10 @@
 
     <!-- Video -->
     <section class="section">
-    <video width="640" height="360" autoplay loop muted>
+    <video class="Objetivos" width="640" height="360" autoplay loop muted>
   <source src="Videos/VerMax_Objetivos.mp4" type="video/mp4">
 </video>
+
 <!-- Descripcion -->
       <h2>Objetivos</h2>
       <p>En VerMax LOQ, estamos constantemente buscando nuevas formas de mejorar nuestros servicios y ampliar nuestros conocimientos. Invertimos en la capacitación continua de nuestro equipo técnico para mantenernos al día con las últimas tendencias y tecnologías en el campo de la videovigilancia. Nuestro objetivo es convertirnos en el referente en la instalación y gestión de sistemas de cámaras de seguridad a nivel nacional. Gracias a nuestra experiencia y a nuestra amplia gama de productos, somos capaces de abordar cualquier proyecto, sin importar su complejidad. Nuestro compromiso con la excelencia nos permite ofrecer soluciones de videovigilancia confiables y escalables que satisfacen las necesidades de nuestros clientes más exigentes.</p>
@@ -139,3 +146,4 @@
   </div>
 </body>
 </html>
+
