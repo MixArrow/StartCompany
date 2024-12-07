@@ -1,47 +1,47 @@
 /*Reinicio Basico */
+/* Reinicio Básico */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: Arial, sans-serif;
 }
+
 /* Configuración del encabezado */
 header {
     position: relative;
     height: 100vh; /* Altura completa del viewport */
-    width: 100%; /* Ancho completo */
+    width: 100%;
     overflow: hidden;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
 
-/*Estilo del video de fondo */
+/* Estilo del video de fondo */
 .background-video-VerMax {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 75px; /* Ajusta la altura según el tamaño del título */
+    height: 100%; /* Cubre toda la altura del header */
     object-fit: cover;
-    z-index: -1; /* Detras del contenido */
-    opacity: 0.95; /*Sombrado ligero*/
+    z-index: -1; /* Detrás del contenido */
+    opacity: 0.95;
 }
 
 /* Contenido dentro del encabezado */
-.header-content {
- width: 100%;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 0 20px;
- box-sizing: border-box;   
-}
-/* Estilo al logo  */
-.logo{
+.header-content .logo {
     font-size: 2em;
     font-weight: bold;
 }
 
-/* Darle estilo a la palabra Login */
-.login a {
+.header-content .login a {
     font-size: 1em;
     color: white;
     text-decoration: none;
@@ -51,35 +51,37 @@ header {
     border-radius: 5px;
 }
 
-.login a:hover{
+.header-content .login a:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
 }
 
-
-
-
-@keyframes mover-fondo {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+/* Sección de contenido */
+.content {
+    padding: 20px;
 }
 
 .section {
     display: flex;
-    align-items: center;
-    justify-content: start; /* Alinea a la izquierda */
-    gap: 20px; /* Espaciado entre elementos */
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px; /* Espaciado entre el video y el texto */
+    padding: 20px;
+    text-align: left;
 }
 
-.Concepto {
-    border-radius: 20px;
-    margin: 10px;
-    width: 50%; /* Ajusta el tamaño si es necesario */
+/* Estilo de videos en las secciones */
+.section video {
+    border: 2px solid red; /* Estilo de depuración */
+    flex-shrink: 0; /* Evita que el video se reduzca */
 }
-        background-position: 100% 50%;
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
