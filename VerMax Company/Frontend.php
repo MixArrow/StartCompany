@@ -3,117 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VerMax LOQ</title>
+    <title>VerMax Company</title>
     <link rel="stylesheet" href="FrontEnd.css">
 </head>
 <body>
-
-   <!-- Video de fondo -->
-
-  <video class="background-video-VerMax" autoplay loop muted>
-      <source src="Videos/Fondo VerMax-Login.mp4" type="video/mp4">
-  </video>
-
-   <!-- Marca de la compania y Logueo -->
-
-    <div class="header-content">
-      <div class="logo">Vermax Company</div>
-        <div class="login">
-            <a href="#">Start Login</a>
-         </div>
-       </div>
+    <!-- Encabezado -->
+    <header>
+        <div class="navbar">
+            <div class="logo">VER<span>MAX</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#cameras">Cameras</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <a href="#">Start Login</a>
+            </div>
+        </div>
     </header>
 
+    <!-- Contenido Principal -->
+    <main>
+        <section class="hero">
+            <img src="Casa.png" alt="Casa de fondo" class="background-image">
+            <div class="overlay"></div>
+            <div class="camera-images">
+                <img src="1.png" alt="Camera 1">
+                <img src="2.png" alt="Camera 2">
+                <img src="3.png" alt="Camera 3">
+                <img src="4.png" alt="Camera 4">
+                <img src="5.png" alt="Camera 5">
+            </div>
+            <h1>VerMax Company</h1>
+        </section>
+    </main>
+</body>
+</html>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VerMax Company</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-    }
-    header .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    header .login {
-      cursor: pointer;
-    }
-    .intro {
-      text-align: center;
-      margin: 50px 20px;
-      position: relative;
-    }
-    .intro h1 {
-      animation: fadeIn 2s ease-in-out;
-    }
-    .intro img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      opacity: 0.3;
-    }
-    .content {
-      padding: 20px;
-    }
-    .section {
-      text-align: center;
-      margin: 30px 0;
-    }
-    .section img {
-      width: 200px;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .section h2 {
-      margin: 10px 0;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Introduccion a VerMax logo e imagenes de entrada -->
-  <div id="intro">
-        <div class="letters">
-            <span class="letter" id="V">V</span>
-            <span class="letter" id="M">M</span>
-        </div>
-        <h1 id="company-name"></h1>
-    </div>
-    <script src="VerMax.js"></script>
-
-      <!-- Fin de la Introduccion -->
-
-  <div class="content">
-
-  <!-- Video -->
-    <section class="section">
-    <video class="Concepto" width="640" height="360" autoplay loop muted>
-    <source src="Videos/VerMax_Concepto.mp4" type="video/mp4">
-    </video>
+<!-- Parte editada -->
 
   <!-- Descripcion -->
     <h2>VerMax LOQ Company</h2>
