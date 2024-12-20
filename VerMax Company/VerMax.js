@@ -9,3 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "auto";
     }, 3000); // Cambia el tiempo según la duración de la animación
 });
+$(document).ready(function() {
+    $(".nav-links li").hover(function() {
+        $(this).children("ul").slideToggle();
+    });
+});
