@@ -1,77 +1,34 @@
 <?php
-include 'VerMax_connect.php'; // Conectar a la base de datos
+// Database.php
 
-// Inicializar variables de error
-$error = "";
+$host = 'localhost';
+$dbname = 'vermax';
+$username = 'root';
+$password = '';
 
-// Verificar si el formulario fue enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user_id = $_POST['user_id'];
-    $user_name = $_POST['user_name'];
-
-    // Consulta SQL para verificar credenciales
-    $sql = "SELECT * FROM users WHERE user_id = '$user_id' AND user_name = '$user_name'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // Credenciales correctas
-        header("Location: dashboard.php"); // Redirigir a un panel de control o página principal
-        exit();
-    } else {
-        // Credenciales incorrectas
-        $error = "ID o Nombre incorrecto. Intente nuevamente.";
-    }
+try {
+    // Create a new PDO connection
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Company - Login</title>
-  <style>
-    body {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-    }
-    .left-panel {
-      flex: 1;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    .form-group {
-      margin: 20px 0;
-    }
-    .form-group input {
-      width: calc(100% - 20px);
-      padding: 10px;
-      margin: 5px 0;
-      display: block;
-    }
-    .form-group a {
-      color: #007BFF;
-      text-decoration: none;
-      margin-right: 10px;
-    }
-    .error {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <div class="left-panel">
-    <h1>Sign in</h1>
-    <?php if ($error): ?>
-      <p class="error"><?= $error; ?></p>
-    <?php endif; ?>
-    <form method="POST" action="">
-      <div class="form-group">
-        <label>Credencial</label>
-        <input type="text" name="user_id" placeholder="ID" required>
-        <input type="text" name="user_name" placeholder="Nombre" required>
-      </div>
-      
+// Function to fetch employee login details
+function fetchEmployeeDetails($employeeId) {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT * FROM employees WHERE employee_id = :employee_id");
+    $stmt->execute(['employee_id' => $employeeId]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+// Function to fetch client invoice details
+function fetchClientInvoice($invoiceId) {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT * FROM invoices WHERE invoice_id = :invoice_id");
+    $stmt->execute(['invoice_id' => $invoiceId]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+// Additional helper functions can be added here as needed
+?>
