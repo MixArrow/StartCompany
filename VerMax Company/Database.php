@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
   <div class="left-panel">
-    <h1>Welcome to VerMax Company</h1>
+    <h1>Sign in</h1>
     <?php if ($error): ?>
       <p class="error"><?= $error; ?></p>
     <?php endif; ?>
