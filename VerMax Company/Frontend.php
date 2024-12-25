@@ -8,36 +8,47 @@
     <script defer src="VerMax.js"></script>
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <div class="navbar">
             <div class="logo">
-                VER<span>MAX</span>
+                <!-- Imagen del Logo -->
+                <img src="VerMax Design/Logo.png" alt="VerMax Logo" class="logo-image">
             </div>
             <nav class="menu">
+                <!-- Navegación de la página principal -->
                 <ul>
-                    <li><a href="#history">History</a></li>
-                    <li><a href="#cameras">Cameras</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#" onclick="openModal('employee')">Sign In</a></li>
-                    <li><a href="#" onclick="openModal('client')">Clients</a></li>
+                    <li><a href="#history">History &#709;</a></li>
+                    <li><a href="#cameras">Cameras &#709;</a></li>
+                    <li><a href="#services">Services &#709;</a></li>
+                    <li><a href="#" class="special-button" onclick="openModal('employee')">Sign In</a></li>
+                    <li><a href="#" class="special-button" onclick="openModal('client')">Clients</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Sección Principal de la Página (Fondo de la Isla) -->
     <section class="hero">
+        <!-- Imagen de fondo de la página principal -->
         <div class="background-image">
-            <img src="image.png" alt="Hero Background">
+            <img src="VerMax Design/Casa.png" alt="Hero Background">
         </div>
         <div class="overlay"></div>
+        <!-- Imagen de las cámaras centradas -->
         <div class="camera-image">
-            <img src="hikvision-central.png" alt="Central Camera">
+            <img src="VerMax Design/All cameras.png" alt="Cameras" class="centered-camera">
         </div>
-        <h1>Welcome to VerMax</h1>
+        <!-- Logo centrado con "Company" debajo -->
+        <div class="logo-container">
+            <img src="VerMax Design/Logo.png" alt="VerMax Logo" class="centered-logo">
+            <p class="logo-subtext">Company</p>
+        </div>
     </section>
 
     <!-- Modal para inicio de sesión de empleados -->
     <div id="employee-modal" class="modal" style="display: none;">
+        <!-- Ventana modal para empleados -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('employee')">&times;</span>
             <h2>Employee Login</h2>
@@ -58,6 +69,7 @@
 
     <!-- Modal para inicio de sesión de clientes -->
     <div id="client-modal" class="modal" style="display: none;">
+        <!-- Ventana modal para clientes -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('client')">&times;</span>
             <h2>Client Login</h2>
@@ -73,11 +85,13 @@
         </div>
     </div>
 
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 VerMax Company. All rights reserved.</p>
+        <p>&copy; 2025 VerMax Company. All rights reserved.</p>
     </footer>
 
     <script>
+        // Funciones para abrir y cerrar las ventanas modales
         function openModal(type) {
             document.getElementById(`${type}-modal`).style.display = 'block';
         }
