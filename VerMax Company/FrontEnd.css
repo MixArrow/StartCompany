@@ -111,21 +111,21 @@ header {
 }
 .logo-container {
   text-align: center;
-  margin-top: -300px;
+  margin-top: -270px;
   position: relative;
 }
 .centered-logo {
-  width: 600px;
-  height: auto;
+  width: 500px;
+  height: 175px;
   margin: 0 auto; 
 }
 .logo-subtext {
-  font-size: 30px;
+  font-size: 20px;
   color: #333;
   position: absolute;
   top: 100%; /* Posiciona justo debajo del logo */
   left: 60%;
-  transform: translate(-50%, -50%); /* Centra horizontalmente y ajusta verticalmente */
+  transform: translate(-10%, -250%); /* Centra horizontalmente y ajusta verticalmente */
 }
 
 /* Footer */
