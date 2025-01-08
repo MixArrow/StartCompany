@@ -1,16 +1,9 @@
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-    const intro = document.getElementById("intro");
-    
-    // Opcional: Ocultar la animación después de completarse
-    setTimeout(() => {
-        intro.style.display = "none";
-        // Aquí puedes cargar el contenido principal de tu página.
-        document.body.style.overflow = "auto";
-    }, 3000); // Cambia el tiempo según la duración de la animación
-});
-$(document).ready(function() {
-    $(".nav-links li").hover(function() {
-        $(this).children("ul").slideToggle();
-    });
-});
+function openModal(type) {
+    const modal = document.getElementById(`${type}-modal`);
+    if (modal) modal.style.display = 'flex'; // Cambiar a 'flex' para centrarlo
+}
+
+function closeModal(type) {
+    const modal = document.getElementById(`${type}-modal`);
+    if (modal) modal.style.display = 'none';
+}
