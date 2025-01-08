@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Arial', sans-serif;
   color: #333;
@@ -19,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px; /* Increased height for better centering */
+  height: 60px;
 }
 
 .navbar {
@@ -27,29 +26,24 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-
 .logo {
   display: flex;
   align-items: center;
 }
-
 .logo-image {
   height: 40px;
 }
-
 .menu {
   margin-left: auto;
 }
-
 .menu ul {
   display: flex;
   list-style: none;
   gap: 20px;
   align-items: center;
   justify-content: flex-end;
-  height: 100%; /* Ensures the menu aligns vertically */
+  height: 100%;
 }
-
 .menu ul li a {
   display: flex;
   align-items: center;
@@ -59,14 +53,12 @@ header {
   padding: 10px 15px;
   transition: background-color 0.3s, color 0.3s;
   font-size: 14px;
-  height: 100%; /* Matches the parent height */
+  height: 100%;
 }
-
 .menu ul li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }
-
 .special-button {
   display: flex;
   align-items: center;
@@ -80,7 +72,6 @@ header {
   transition: background-color 0.3s, transform 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .special-button:hover {
   background: linear-gradient(to right,#435298, #0e1c53, #142983, #010552);
   transform: scale(1.05);
@@ -91,23 +82,20 @@ header {
   position: relative;
   text-align: center;
 }
-
 .background-image img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
-
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 300%;
+  width: 100%;
   height: 500px;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
   z-index: 1;
 }
-
 .camera-image {
   position: relative;
   z-index: 10;
@@ -116,35 +104,39 @@ header {
   align-items: center;
   margin-top: -400px;
 }
-
 .centered-camera {
   width: 800px;
   height: auto;
-  border-radius: 15px;
-
+  border-radius: 20px;
 }
-
 .logo-container {
   text-align: center;
-  margin-top: -100px;
+  margin-top: -300px;
+  position: relative;
 }
-
 .centered-logo {
-  width: 300px; /* Aumenta el tamaño del logo */
-  height: auto; /* Mantiene la proporción */
-  margin: 20px auto; /* Centra el logo */
+  width: 600px;
+  height: auto;
+  margin: 0 auto; 
 }
-
 .logo-subtext {
-  font-size: 16px; /* Ajusta el tamaño del texto */
+  font-size: 30px;
   color: #333;
-  margin-top: 5px;
+  position: absolute;
+  top: 100%; /* Posiciona justo debajo del logo */
+  left: 60%;
+  transform: translate(-50%, -50%); /* Centra horizontalmente y ajusta verticalmente */
 }
 
 /* Footer */
-footer {
-  background-color: #001f3f;
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #013a72;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
+  z-index: 1000;
 }
