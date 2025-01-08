@@ -47,7 +47,7 @@
     </section>
 
     <!-- Modal para inicio de sesión de empleados -->
-    <div id="employee-modal" class="modal" style="display: none;">
+    <div id="employee-modal" class="modal">
         <!-- Ventana modal para empleados -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('employee')">&times;</span>
@@ -68,7 +68,7 @@
     </div>
 
     <!-- Modal para inicio de sesión de clientes -->
-    <div id="client-modal" class="modal" style="display: none;">
+    <div id="client-modal" class="modal">
         <!-- Ventana modal para clientes -->
         <div class="modal-content">
             <span class="close" onclick="closeModal('client')">&times;</span>
@@ -86,19 +86,12 @@
     </div>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="sticky-footer">
         <p>&copy; 2025 VerMax Company. All rights reserved.</p>
     </footer>
+</body>
+</html>
 
-    <script>
-        // Funciones para abrir y cerrar las ventanas modales
-        function openModal(type) {
-            document.getElementById(`${type}-modal`).style.display = 'block';
-        }
-
-        function closeModal(type) {
-            document.getElementById(`${type}-modal`).style.display = 'none';
-        }
     </script>
 </body>
 </html>
