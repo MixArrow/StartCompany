@@ -29,7 +29,7 @@
     </header>
 
     <!-- Sección Principal de la Página (Fondo de la Isla) -->
-    <section class="hero">
+    <section class="hero" id="main-section">
         <!-- Imagen de fondo de la página principal -->
         <div class="background-image">
             <img src="VerMax Design/Casa.png" alt="Hero Background">
@@ -46,52 +46,73 @@
         </div>
     </section>
 
-    <!-- Modal para inicio de sesión de empleados -->
-    <div id="employee-modal" class="modal">
-        <!-- Ventana modal para empleados -->
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('employee')">&times;</span>
-            <h2>Employee Login</h2>
-            <form action="employeeLogin.php" method="POST">
-                <label for="employee-name">Employee Name:</label>
-                <input type="text" id="employee-name" name="employee_name" required>
-
-                <label for="employee-id">Employee ID:</label>
-                <input type="text" id="employee-id" name="employee_id" required>
-
-                <label for="employee-password">Password:</label>
-                <input type="password" id="employee-password" name="password" required>
-
-                <button type="submit">Login</button>
-            </form>
+    <!-- Segunda Apariencia -->
+    <section class="second-section" id="second-section">
+        <div class="second-logo">
+            <img src="VerMax Design/Logo.png" alt="VerMax Logo" class="second-logo-image">
         </div>
-    </div>
-
-    <!-- Modal para inicio de sesión de clientes -->
-    <div id="client-modal" class="modal">
-        <!-- Ventana modal para clientes -->
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('client')">&times;</span>
-            <h2>Client Login</h2>
-            <form action="clientLogin.php" method="POST">
-                <label for="service-number">Service Number:</label>
-                <input type="text" id="service-number" name="service_number" required>
-
-                <label for="invoice-id">Invoice ID:</label>
-                <input type="text" id="invoice-id" name="invoice_id" required>
-
-                <button type="submit">Login</button>
-            </form>
+        <div class="content-wrapper">
+            <div class="camera-display">
+                <img src="VerMax Design/ModernaCamara.png" alt="Modern Camera" class="modern-camera">
+            </div>
+            <div class="text-content">
+                <h1>Welcome to <span class="highlight">VERMAX</span> LOQ Company</h1>
+                <p>Es un líder en soluciones de videovigilancia a nivel mundial. Nos especializamos en la instalación personalizada de sistemas de cámaras de seguridad, adaptándonos a las necesidades únicas de cada cliente.</p>
+            </div>
         </div>
-    </div>
+        <div class="features">
+            <div class="feature">
+                <span class="icon">★</span>
+                <h3>Resolución de alta definición</h3>
+                <p>Las cámaras actuales ofrecen resoluciones de hasta 8K, lo que permite capturar imágenes extremadamente detalladas.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🌙</span>
+                <h3>Visión nocturna</h3>
+                <p>Gracias a los sensores de imagen de alta sensibilidad y los LED infrarrojos, las cámaras pueden capturar imágenes claras en completa oscuridad.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🔍</span>
+                <h3>Zoom digital y óptico</h3>
+                <p>Muchas cámaras permiten acercar y alejar la imagen de forma digital u óptica, lo que resulta útil para observar detalles a distancia.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">📹</span>
+                <h3>Detección de movimiento</h3>
+                <p>Las cámaras pueden activarse automáticamente al detectar movimiento en el área de vigilancia, enviando alertas al usuario o grabando un video.</p>
+            </div>
+        </div>
+        <!-- Flechas de navegación -->
+        <div class="navigation-arrows">
+            <button class="arrow-left" onclick="navigateSection('prev')">&#9664;</button>
+            <button class="arrow-right" onclick="navigateSection('next')">&#9654;</button>
+        </div>
+    </section>
 
     <!-- Pie de página -->
     <footer class="sticky-footer">
         <p>&copy; 2025 VerMax Company. All rights reserved.</p>
     </footer>
-</body>
-</html>
 
+    <script>
+        // Navegación entre secciones
+        function navigateSection(direction) {
+            const currentSection = document.querySelector('.current-section');
+            let targetSection;
+
+            if (direction === 'next') {
+                targetSection = document.getElementById('second-section');
+            } else {
+                targetSection = document.getElementById('main-section');
+            }
+
+            currentSection.classList.remove('current-section');
+            targetSection.classList.add('current-section');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Asignar clase inicial
+        document.getElementById('main-section').classList.add('current-section');
     </script>
 </body>
 </html>
