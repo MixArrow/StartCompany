@@ -1,49 +1,25 @@
-// Selección de las secciones para navegación
-const sections = document.querySelectorAll('.section');
-const arrows = document.querySelectorAll('.arrow');
+// Smooth scrolling effect between sections
+const sections = document.querySelectorAll('.hero, .second-section');
 let currentIndex = 0;
 
-// Función para mostrar una sección específica
-function showSection(index) {
-    sections.forEach((section, i) => {
-        section.style.display = i === index ? 'block' : 'none';
-    });
-    currentIndex = index;
-}
+// Smooth scroll behavior
+window.addEventListener("scroll", () => {
+    const heroSection = document.querySelector(".hero");
+    const secondSection = document.querySelector(".second-section");
 
-// Manejo de flechas para navegar
-arrows.forEach((arrow) => {
-    arrow.addEventListener('click', (e) => {
-        if (e.target.classList.contains('left-arrow')) {
-            currentIndex = currentIndex > 0 ? currentIndex - 1 : sections.length - 1;
-        } else {
-            currentIndex = currentIndex < sections.length - 1 ? currentIndex + 1 : 0;
-        }
-        showSection(currentIndex);
-    });
-});
-
-// Navegación con teclado
-window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-        currentIndex = currentIndex > 0 ? currentIndex - 1 : sections.length - 1;
-    } else if (e.key === 'ArrowRight') {
-        currentIndex = currentIndex < sections.length - 1 ? currentIndex + 1 : 0;
+    if (window.scrollY > heroSection.offsetHeight / 2) {
+        secondSection.classList.add("active");
+    } else {
+        secondSection.classList.remove("active");
     }
-    showSection(currentIndex);
 });
 
-// Scroll entre secciones
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    sections.forEach((section, index) => {
-        const offsetTop = section.offsetTop;
-        const offsetHeight = section.offsetHeight;
-        if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
-            currentIndex = index;
-        }
-    });
-});
-
-// Inicializar mostrando la primera sección
-showSection(0);
+// Manual navigation with arrows or buttons
+function navigateSection(direction) {
+    if (direction === "next") {
+        currentIndex = currentIndex < sections.length - 1 ? currentIndex + 1 : 0;
+    } else {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : sections.length - 1;
+    }
+    sections[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
