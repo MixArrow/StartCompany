@@ -7,10 +7,12 @@ window.addEventListener("scroll", () => {
     const heroSection = document.querySelector(".hero");
     const secondSection = document.querySelector(".second-section");
 
-    if (window.scrollY > heroSection.offsetHeight / 2) {
-        secondSection.classList.add("active");
+    if (window.scrollY > heroSection.offsetHeight - 50) {
+        secondSection.style.display = "block";
+        heroSection.style.display = "none";
     } else {
-        secondSection.classList.remove("active");
+        secondSection.style.display = "none";
+        heroSection.style.display = "block";
     }
 });
 
