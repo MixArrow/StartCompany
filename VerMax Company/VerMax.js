@@ -1,27 +1,43 @@
-// Smooth scrolling effect between sections
-const sections = document.querySelectorAll('.hero, .second-section');
-let currentIndex = 0;
+// Navegación entre secciones
+function navigateSection(direction) {
+    const sections = document.querySelectorAll('section');
+    const currentSection = document.querySelector('.current-section');
+    let targetIndex = Array.from(sections).indexOf(currentSection);
 
-// Smooth scroll behavior
-window.addEventListener("scroll", () => {
-    const heroSection = document.querySelector(".hero");
-    const secondSection = document.querySelector(".second-section");
+    if (direction === 'next') {
+        targetIndex = (targetIndex + 1) % sections.length;
+    } else if (direction === 'prev') {
+        targetIndex = (targetIndex - 1 + sections.length) % sections.length;
+    }
 
-    if (window.scrollY > heroSection.offsetHeight - 50) {
-        secondSection.style.display = "block";
-        heroSection.style.display = "none";
+    currentSection.classList.remove('current-section');
+    const targetSection = sections[targetIndex];
+    targetSection.classList.add('current-section');
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Mostrar segunda sección al hacer scroll hacia abajo
+window.addEventListener('scroll', () => {
+    const mainSection = document.getElementById('main-section');
+    const secondSection = document.getElementById('second-section');
+
+    if (window.scrollY > mainSection.offsetHeight / 2) {
+        secondSection.classList.add('active');
+        mainSection.classList.remove('current-section');
     } else {
-        secondSection.style.display = "none";
-        heroSection.style.display = "block";
+        secondSection.classList.remove('active');
+        mainSection.classList.add('current-section');
     }
 });
 
-// Manual navigation with arrows or buttons
-function navigateSection(direction) {
-    if (direction === "next") {
-        currentIndex = currentIndex < sections.length - 1 ? currentIndex + 1 : 0;
-    } else {
-        currentIndex = currentIndex > 0 ? currentIndex - 1 : sections.length - 1;
-    }
-    sections[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Flechas de navegación
+const leftArrow = document.querySelector('.arrow-left');
+const rightArrow = document.querySelector('.arrow-right');
+
+if (leftArrow && rightArrow) {
+    leftArrow.addEventListener('click', () => navigateSection('prev'));
+    rightArrow.addEventListener('click', () => navigateSection('next'));
 }
+
+// Inicializar la sección actual
+document.getElementById('main-section').classList.add('current-section');

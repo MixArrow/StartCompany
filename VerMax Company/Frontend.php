@@ -10,8 +10,7 @@
 <body>
 
 
-
-
+<h2>VerMax The Company</h2>
 
     <!-- Encabezado -->
     <header>
@@ -30,7 +29,6 @@
             </nav>
         </div>
     </header>
-
 
 
 
@@ -94,7 +92,7 @@
     </section>
 
     <footer class="sticky-footer">
-        <p>&copy; 2025 VerMax Company. All rights reserved.</p>
+        <p> 2025 VerMax Company. All rights reserved.</p>
     </footer>
 
     <script>
