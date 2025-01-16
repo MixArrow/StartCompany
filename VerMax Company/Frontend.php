@@ -10,8 +10,6 @@
 <body>
 
 
-<h2>VerMax The Company</h2>
-
     <!-- Encabezado -->
     <header>
         <div class="navbar">
